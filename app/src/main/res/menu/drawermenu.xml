@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/profile" android:title="Profile" />
+    <item android:id="@+id/business" android:title="Business" />
+    <item android:id="@+id/event" android:title="Event" />
+    <item android:id="@+id/product" android:title="Product" />
+    <item android:id="@+id/service" android:title="Service" />
+</menu>
