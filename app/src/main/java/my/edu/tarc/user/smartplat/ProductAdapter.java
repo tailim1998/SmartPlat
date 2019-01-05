@@ -10,32 +10,32 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class ProductAdapter extends ArrayAdapter<ProductFragment> {
+public class ProductAdapter extends ArrayAdapter<Product> {
 
-    public ProductAdapter(Activity context,int resource,List<ProductFragment> list) {
-        super(context,resource,list);
+    public ProductAdapter(Activity context, int resource, List<Product> list) {
+        super(context, resource, list);
     }
 
-    public View getView(int position,View convertView,ViewGroup parent){
-        ProductFragment product =getItem(position);
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        Product product = getItem(position);
 
-        LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater  = (LayoutInflater) getContext()
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        View rowView=inflater.inflate(R.layout.product_fragment,parent,false);
+        View rowView = inflater.inflate(R.layout.product_fragment, parent, false);
 
-        TextView productID,productName,productDes,productImagePath;
+        TextView textViewProductImage, textViewProduct, textViewProductName,textViewProductDes;
 
-        productID=rowView.findViewById(R.id.productID);
-        productName=rowView.findViewById(R.id.productName);
-        productDes=rowView.findViewById(R.id.productDes);
-        productImagePath=rowView.findViewById(R.id.productImagePath);
+        textViewProductImage = rowView.findViewById(R.id.imageView);
+        textViewProduct = rowView.findViewById(R.id.textViewProductId);
+        textViewProductName = rowView.findViewById(R.id.textViewProductName);
+        textViewProductDes = rowView.findViewById(R.id.textViewProductDescription);
 
-        productID.setText(String.format("%s : %s","productId",Product.getProductId());
-        productName.setText(String.format("%s : %s","productName",Product.getProductName()));
-        productID.setText(String.format("%s : %s","productId",product.getProductDes()));
-        productID.setText(String.format("%s : %s","productId",product.getId()));
-
-
-
+        textViewProductImage.setText(String.format("%s : %s","productImagePath",product.getProductImagePath()));
+        textViewProduct.setText(String.format("%s : %s","productId",product.getProductId()));
+        textViewProductName.setText(String.format("%s : %s","productName",product.getProductName()));
+        textViewProductDes.setText(String.format("%s : %s","productDes",product.getProductDes()));
+        return rowView;
     }
 }

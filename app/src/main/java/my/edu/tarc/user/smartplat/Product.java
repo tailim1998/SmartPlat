@@ -6,8 +6,7 @@ public class Product{
     private String ProductDes;
     private String ProductImagePath;
 
-    public Product() {
-    }
+
 
     public Product(String productId, String productName, String productDes, String productImagePath) {
         this.productId = productId;
@@ -15,6 +14,7 @@ public class Product{
         this.ProductDes = productDes;
         this.ProductImagePath = productImagePath;
     }
+
 
     public String getProductId() {
         return productId;

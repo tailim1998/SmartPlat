@@ -9,11 +9,20 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class ProductFragment extends Fragment {
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.product_fragment,container,false);
     }
+
+
+
+
+
+
+
 
 
 }
